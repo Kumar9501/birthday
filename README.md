@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Birthday surprise website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal, cinematic birthday experience. All names, messages, photos, and music live in **one file**: `src/config/birthdayConfig.js`.
 
-## Available Scripts
+## Run locally
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev
+```
 
-### `npm start`
+Then open the local URL Vite prints (usually `http://localhost:5173`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm run build
+npm run preview
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Personalize
 
-### `npm test`
+1. Open `src/config/birthdayConfig.js`.
+2. Change `name`, `yourName`, `birthday`, and every message.
+3. Photographs are already in `public/images/` (`photo1.jpg` … `photo23.jpg`).
+4. Add **Kaafi Hai Na** yourself as `public/music/kaafi-hai-na.mp3`. Copyrighted songs cannot be downloaded into the project from the internet.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Music starts when she taps **Open Your Surprise**. Browsers will not autoplay audio before that click.
 
-### `npm run build`
+## Deploy on Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Push this project to GitHub.
+2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import the repo.
+3. Framework preset: **Vite**. Build command: `npm run build`. Output: `dist`.
+4. Deploy. After it is live, replace the placeholder photos and music, then redeploy.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Or from the terminal after installing Vercel CLI:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm i -g vercel
+vercel
+```
 
-### `npm run eject`
+## Deploy on Netlify
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Push this project to GitHub.
+2. Go to [netlify.com](https://www.netlify.com) → **Add new site** → import the repo.
+3. Build command: `npm run build`. Publish directory: `dist`.
+4. Deploy.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Or drag the `dist` folder onto Netlify after `npm run build`.
